@@ -1,0 +1,21 @@
+opencollection: 1.0.0
+
+info:
+  name: healthBridge
+
+request:
+  variables:
+    - name: url
+      value: ""
+    - name: admin
+      value: ""
+    - name: user
+      value: ""
+    - name: doctor
+      value: ""
+bundled: false
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git

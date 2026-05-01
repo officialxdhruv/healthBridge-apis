@@ -1,0 +1,51 @@
+info:
+  name: add-doctor
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{admin}}/add-doctor"
+  body:
+    type: multipart-form
+    data:
+      - name: name
+        type: text
+        value: Dhruv
+      - name: email
+        type: text
+        value: dhruv@gmail.com
+      - name: password
+        type: text
+        value: "12345678"
+      - name: speciality
+        type: text
+        value: General physician
+      - name: degree
+        type: text
+        value: MBBS
+      - name: experience
+        type: text
+        value: 4 Years
+      - name: about
+        type: text
+        value: Dr. Davis has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies. Dr. Davis has a strong commitment to delivering comprehensive medical care, focusing on preventive medicine, early diagnosis, and effective treatment strategies.
+      - name: fees
+        type: text
+        value: "1000"
+      - name: address
+        type: text
+        value: '{"line1": "17th Cross, Richmond", "line2": "Circle, Ring Road, London", "city": "London"}'
+      - name: image
+        type: file
+        value:
+          - Screen Shot 2025-12-24 at 22.09.12.png
+  auth:
+    type: bearer
+    token: "{{adminbearer}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
