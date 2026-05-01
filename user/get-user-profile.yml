@@ -7,11 +7,11 @@ http:
   method: GET
   url: "{{user}}/get-profile"
   body:
-    type: text
+    type: json
     data: |-
       {
-          "email" : "dhruv@gmail.com",
-          "password": "12345678"
+        "email": "dhruv@gmail.com",
+        "password": "12345678"
       }
 
 settings:

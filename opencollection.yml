@@ -1,18 +1,29 @@
 opencollection: 1.0.0
 
 info:
-  name: healthBridge
+  name: healthBridge-apis
+config:
+  proxy:
+    inherit: true
+    config:
+      protocol: http
+      hostname: ""
+      port: ""
+      auth:
+        username: ""
+        password: ""
+      bypassProxy: ""
 
 request:
   variables:
     - name: url
-      value: ""
+      value: http://localhost:3000
     - name: admin
-      value: ""
+      value: "{{url}}/api/v1/admin"
     - name: user
-      value: ""
+      value: "{{url}}/api/v1/user"
     - name: doctor
-      value: ""
+      value: "{{url}}/api/v1/doctor"
 bundled: false
 extensions:
   bruno:

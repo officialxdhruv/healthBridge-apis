@@ -40,9 +40,6 @@ http:
         type: file
         value:
           - Screen Shot 2025-12-24 at 22.09.12.png
-  auth:
-    type: bearer
-    token: "{{adminbearer}}"
 
 settings:
   encodeUrl: true
